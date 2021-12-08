@@ -1,0 +1,21 @@
+
+<html>
+<body>
+<h1>Hello World</h1>
+<script type="text/javascript" charset="utf-8">
+
+function aclean(array) {
+  let map = new Map();
+  for (let word of array) {
+    let sorted = word.toLowerCase().sort()
+    map.set(sorted, word);
+  }
+  return Array.from(map.values());
+}
+
+let array = ["Миша", "Куст", "тсук", "МАШИ", "ткус", "туск", "шами"];
+
+alert( aclean(array) );
+</script>
+</body>
+</html>
